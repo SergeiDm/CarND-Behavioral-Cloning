@@ -71,7 +71,7 @@ Other features of training stage:
 - Epochs - 2. More epochs didn’t significantly improve training and validating loss. Moreover, large number of epochs may lead to overfitting.
 - Dropout – 20%. In order to prevent model from overfitting dropout techniques was applied. Common range for this hyperparameter is 20-50%.
 
-By using 90% of 14 821 images and two epochs, the total number of images processed by network is 2*0.9*14821 = 26 677. For computers, which don’t use GPU-accelerated learning, processing this number of images doesn’t take much time.
+By using 90% of 14 821 images and two epochs, the total number of images processed by network is 2 * 0.9 * 14821 = 26 677. For computers, which don’t use GPU-accelerated learning, processing this number of images doesn’t take much time.
 
 ## Testing model
 Model was tested on the simulator track, from which pictures for learning were taken. A vehicle keep moving on drivable part of the road.
