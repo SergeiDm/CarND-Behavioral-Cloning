@@ -1,6 +1,6 @@
 # CarND-Behavioral-Cloning
 ## Project Description
-The project consists of learning network to map images, taken from a front-facing camera with steering angles. According to NVIDEA [«End to End Learning for Self-Driving Cars»](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf), this approach for self-driving cars may lead to better performance in comparison explicit decomposition of the self-driving problem.
+The project consists of learning network to map images taken from a front-facing camera with steering angles. According to NVIDEA [«End to End Learning for Self-Driving Cars»](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf), this approach for self-driving cars may lead to better performance in comparison explicit decomposition of the self-driving problem.
 
 ## Project files
 The project includes the following folder/files:
