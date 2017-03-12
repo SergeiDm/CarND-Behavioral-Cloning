@@ -17,3 +17,9 @@ Input data is a set of RGB images 160 (height) x 320 (width) pixels, generated b
 
 Examples:
 
+![Image examples](https://github.com/SergeiDm/CarND-Behavioral-Cloning/blob/master/illustrations/image_examples.jpg)
+
+The total number of images used in this project is 14 821. ~30% of them is recovery data.
+
+Output data is steering angles in range [-1, 1].
+
