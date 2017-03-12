@@ -10,6 +10,10 @@ The project includes the following folder/files:
 - model.json – the model architecture.
 - illustrations - the folder with pictures 'for README.md'.
 
+Result video:
+<a href="https://www.youtube.com/watch?v=wug6ksRY5BQ" target="_blank"><img src="http://img.youtube.com/vi/wug6ksRY5BQ/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
 For testing autonomous driving the following code should be executed:
 
 `python drive.py model.json`
