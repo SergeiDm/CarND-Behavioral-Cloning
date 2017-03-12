@@ -49,5 +49,27 @@ Architecture of network depends on input and output data (count, quality, how th
 
 The final structure of the model is:
 
+![Net architecture](https://github.com/SergeiDm/CarND-Behavioral-Cloning/blob/master/illustrations/net_architecture.jpg)
 
+The model have the following differences from original NVIDEA’s one:
+- Inception model between layer 1 and 3. As a rule, inception model gives better performance and used in well-known networks (e.g. GoogLeNet) for image classification. In this case, inception model concatenates outputs from 5x5 conv layer and 2x2 max pooling of 1x1 conv layer.
+- Numbers of neurons in layers were insignificantly increased during validating and testing model.
 
+## Training strategy
+All collected data was divided into training (90%) and validating (10%) sets by using random splitting (train_test_split). Comparing training and validating loss helped to control if the model was over or under fitting.
+In order to prevent training stage from out of memory, generator was used. Generator produces a batch of data and gives it to the model for learning process.
+Other features of training stage:
+- Objective/ loss function – mean square error.
+- Type of optimizer: Adam optimizer. This gradient-based optimizer changes learning rate and takes advantage of SGD with momentum.
+- Type of activation function: tanh. This function not only introduce non-linearity, but also its output [-1, 1] coincides with outputs of the model:
+
+![tanh_function](https://github.com/SergeiDm/CarND-Behavioral-Cloning/blob/master/illustrations/tanh_function.jpg)
+
+- Batch size – 128 images. Good batch size increases convergency and the same time keeps computational cost low. This hyperparameter was chosen after several starts of training.
+- Epochs - 2. More epochs didn’t significantly improve training and validating loss. Moreover, large number of epochs may lead to overfitting.
+- Dropout – 20%. In order to prevent model from overfitting dropout techniques was applied. Common range for this hyperparameter is 20-50%.
+
+By using 90% of 14 821 images and two epochs, the total number of images processed by network is 2*0.9*14821 = 26 677. For computers, which don’t use GPU-accelerated learning, processing this number of images doesn’t take much time.
+
+## Testing model
+Model was tested on the simulator track, from which pictures for learning were taken. A vehicle keep moving on drivable part of the road.
