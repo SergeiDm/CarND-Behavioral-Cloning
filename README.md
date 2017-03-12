@@ -11,6 +11,7 @@ The project includes the following folder/files:
 - illustrations - the folder with pictures 'for README.md'.
 
 For testing autonomous driving the following code should be executed:
+
 `python drive.py model.json`
 
 ## Project Data
